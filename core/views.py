@@ -12,4 +12,4 @@ def about(request):
                     <h2>Acerca de</h2>
                     <p>Me llamo Héctor y me encanta Django!</p>
                     """)
-# Create your views here.
+
