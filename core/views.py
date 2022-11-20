@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import HttpResponse, render
 
 html_base = """
     <h1>Mi Web Personal</h1>
