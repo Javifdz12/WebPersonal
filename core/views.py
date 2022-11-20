@@ -1,15 +1,20 @@
 from django.shortcuts import render, HttpResponse
 
+html_base = """
+    <h1>Mi Web Personal</h1>
+    <ul>
+    <li><a href="/">Portada</a></li>
+    <li><a href="/about/">Acerca de</a></li>
+    </ul>
+"""
 def home(request):
-    html_response = "<h1>Mi Web Personal</h1>"
-    for i in range(10):
-        html_response += "<p>Esto es la portada</p>"
-    return HttpResponse(html_response)
-
+    return HttpResponse(html_base + """
+    <h2>Bienvenidos</h2>
+    <p>Esto es la portada.</p>
+    """)
 def about(request):
-    return HttpResponse("""
-                    <h1>Mi Web Personal</h1>
-                    <h2>Acerca de</h2>
-                    <p>Me llamo Héctor y me encanta Django!</p>
-                    """)
+    return HttpResponse(html_base + """
+    <h2>Acerca de</h2>
+    <p>Me llamo Héctor y me encanta Django!</p>
+    """)
 
