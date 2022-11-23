@@ -1,3 +1,4 @@
+<!--
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,3 +17,23 @@
     {% block content %}{% endblock %}
 </body>
 </html>
+-->
+<title>{% block title %}{% endblock %} | Juan Pérez(Ingeniero)</title>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Portada</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'about-me' %}">Acerca
+de</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'portfolio'%}">Portafolio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact'%}">Contacto</a>
+        </li>
+        </ul>
+</div>
+{% block content %}{% endblock %}
